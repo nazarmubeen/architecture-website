@@ -32,6 +32,22 @@
     border-color: transparent;
 }
 
+.gallery-subfilters {
+    margin-top: calc(var(--spacing-xs) * -1);
+    margin-bottom: var(--spacing-lg);
+}
+
+.filter-btn-sub {
+    font-size: var(--font-size-xs);
+    padding: 4px var(--spacing-sm);
+    opacity: 0.8;
+}
+
+.filter-btn-sub:hover,
+.filter-btn-sub.active {
+    opacity: 1;
+}
+
 .filter-count {
     display: inline-block;
     margin-left: 6px;
