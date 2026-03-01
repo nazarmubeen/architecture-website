@@ -25,20 +25,20 @@ const Contact: React.FC = () => {
 
                             <div className="contact-details">
                                 <div className="contact-detail">
+                                    <h3>👤 Ar. Mohd. Aquib Khaliq</h3>
+                                    <p><a href="tel:9569107568">+91 95691 07568</a></p>
+                                </div>
+                                <div className="contact-detail">
+                                    <h3>👤 Ar. Prerna Maurya</h3>
+                                    <p><a href="tel:8853990396">+91 88539 90396</a></p>
+                                </div>
+                                <div className="contact-detail">
                                     <h3>📧 Email</h3>
-                                    <p>info@architecturalfirm.com</p>
-                                </div>
-                                <div className="contact-detail">
-                                    <h3>📱 Phone</h3>
-                                    <p>+1 (555) 123-4567</p>
-                                </div>
-                                <div className="contact-detail">
-                                    <h3>📍 Address</h3>
-                                    <p>123 Design Street<br />City, State 12345</p>
+                                    <p><a href="mailto:davenue1828@gmail.com">davenue1828@gmail.com</a></p>
                                 </div>
                                 <div className="contact-detail">
                                     <h3>🕐 Hours</h3>
-                                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 4:00 PM</p>
+                                    <p>Monday – Saturday: 9:00 AM – 7:00 PM</p>
                                 </div>
                             </div>
                         </div>

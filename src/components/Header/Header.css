@@ -19,15 +19,41 @@
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
     text-decoration: none;
     z-index: var(--z-fixed);
 }
 
-.logo-text {
+.logo-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 4px;
+    background: #fff;
+    padding: 2px;
+}
+
+.logo-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-number {
     font-size: var(--font-size-xl);
-    font-weight: 700;
-    margin: 0;
+    font-weight: 800;
     color: var(--color-text-primary);
+    letter-spacing: 0.05em;
+}
+
+.logo-name {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
 }
 
 .navigation {

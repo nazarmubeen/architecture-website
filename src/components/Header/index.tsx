@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
+const BASE = import.meta.env.BASE_URL;
+
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
@@ -13,7 +15,11 @@ const Header: React.FC = () => {
             <div className="container">
                 <div className="header-content">
                     <Link to="/" className="logo">
-                        <h1 className="logo-text">Architectural <span className="text-gradient">Firm</span></h1>
+                        <img src={`${BASE}assets/logo.png`} alt="1828 Design Avenue" className="logo-img" />
+                        <div className="logo-text-group">
+                            <span className="logo-number">1828</span>
+                            <span className="logo-name">DESIGN AVENUE</span>
+                        </div>
                     </Link>
 
                     <button

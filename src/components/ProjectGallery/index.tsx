@@ -12,69 +12,70 @@ interface Project {
 const BASE = import.meta.env.BASE_URL;
 const p = (file: string) => `${BASE}assets/projects/${file}`;
 
+const INT = 'Residential & Office Interiors';
+const COM = 'Commercial Complexes';
+
 const projects: Project[] = [
-    // ── Exterior ──────────────────────────────────────────────────────────────
-    { id:  1, title: 'Luxury Residence',            category: 'Exterior',   year: '2024', image: p('project-1.jpg')  },
-    { id:  2, title: 'Modern Villa',                category: 'Exterior',   year: '2023', image: p('project-2.jpg')  },
-    { id:  3, title: 'Contemporary Home',           category: 'Exterior',   year: '2023', image: p('ext-04.jpg')     },
-    { id:  4, title: 'Corporate Complex',           category: 'Exterior',   year: '2023', image: p('project-3.jpg')  },
-    { id:  5, title: 'Design Avenue HQ',            category: 'Exterior',   year: '2024', image: p('ext-05.jpg')     },
+    // ── Residence ─────────────────────────────────────────────────────────────
+    { id:  1, title: 'Luxury Residence',            category: 'Residence', year: '2024', image: p('project-1.jpg') },
+    { id:  2, title: 'Modern Villa',                category: 'Residence', year: '2023', image: p('project-2.jpg') },
+    { id:  3, title: 'Contemporary Home',           category: 'Residence', year: '2023', image: p('ext-04.jpg')    },
 
-    // ── Living Room ───────────────────────────────────────────────────────────
-    { id:  6, title: 'Drawing Room',                category: 'Living Room', year: '2025', image: p('project-4.jpg')  },
-    { id:  7, title: 'Luxury Living Lounge',        category: 'Living Room', year: '2025', image: p('wa-02.jpg')      },
-    { id:  8, title: 'Living Room with Staircase',  category: 'Living Room', year: '2025', image: p('wa-10.jpg')      },
-    { id:  9, title: 'Living Area & Lift Lobby',    category: 'Living Room', year: '2025', image: p('wa-03.jpg')      },
-    { id: 10, title: 'Sitting Room',                category: 'Living Room', year: '2025', image: p('wa-04.jpg')      },
-    { id: 11, title: 'Living Room with Fireplace',  category: 'Living Room', year: '2025', image: p('wa-09.jpg')      },
-    { id: 12, title: 'Aquarium Feature Wall',       category: 'Living Room', year: '2025', image: p('wa-13.jpg')      },
-    { id: 13, title: 'Marble TV Wall Lounge',       category: 'Living Room', year: '2025', image: p('am-liv-01.jpg')  },
-    { id: 14, title: 'Botanical Mural Living Room', category: 'Living Room', year: '2025', image: p('am-liv-02.jpg')  },
-    { id: 15, title: 'Classic Living Room',         category: 'Living Room', year: '2025', image: p('am-liv-03.jpg')  },
+    // ── Apartments ────────────────────────────────────────────────────────────
+    { id:  4, title: 'Luxury Apartments',           category: 'Apartments', year: '2024', image: p('hero.jpg')     },
 
-    // ── Bedroom ───────────────────────────────────────────────────────────────
-    { id: 16, title: 'Master Bedroom — Blue Arch',  category: 'Bedroom',    year: '2024', image: p('project-5.jpg')  },
-    { id: 17, title: 'Bedroom Suite — Beige',       category: 'Bedroom',    year: '2024', image: p('project-6.jpg')  },
-    { id: 18, title: 'Blue Headboard Bedroom',      category: 'Bedroom',    year: '2024', image: p('azhar-1b.jpg')   },
-    { id: 19, title: 'Bedroom — Wardrobe View',     category: 'Bedroom',    year: '2024', image: p('azhar-1c.jpg')   },
-    { id: 20, title: 'Bedroom — Full View',         category: 'Bedroom',    year: '2024', image: p('azhar-1d.jpg')   },
-    { id: 21, title: 'Beige Suite — Side View',     category: 'Bedroom',    year: '2024', image: p('azhar-2b.jpg')   },
-    { id: 22, title: 'Beige Suite — Wide View',     category: 'Bedroom',    year: '2024', image: p('azhar-2c.jpg')   },
-    { id: 23, title: 'Beige Suite — Detail',        category: 'Bedroom',    year: '2024', image: p('azhar-2d.jpg')   },
-    { id: 24, title: 'Classic Bedroom',             category: 'Bedroom',    year: '2025', image: p('wa-01.jpg')      },
-    { id: 25, title: 'Blue Arch Bedroom',           category: 'Bedroom',    year: '2025', image: p('wa-06.jpg')      },
-    { id: 26, title: 'Zen Bamboo Bedroom',          category: 'Bedroom',    year: '2025', image: p('wa-08.jpg')      },
-    { id: 27, title: 'Contemporary Bedroom',        category: 'Bedroom',    year: '2025', image: p('wa-14.jpg')      },
-    { id: 28, title: 'Master Bedroom — Wood',       category: 'Bedroom',    year: '2025', image: p('am-bed-01.jpg')  },
-    { id: 29, title: 'Bedroom — Natural Light',     category: 'Bedroom',    year: '2025', image: p('am-bed-02.jpg')  },
-    { id: 30, title: 'Bedroom — TV Panel',          category: 'Bedroom',    year: '2025', image: p('am-bed-03.jpg')  },
-    { id: 31, title: 'Bedroom — Floral Mural',      category: 'Bedroom',    year: '2025', image: p('am-bed-04.jpg')  },
-    { id: 32, title: 'Master Suite — Dressing',     category: 'Bedroom',    year: '2025', image: p('am-bed-05.jpg')  },
-    { id: 33, title: "Kids Room — Blush",           category: 'Bedroom',    year: '2025', image: p('am-bed-06.jpg')  },
-    { id: 34, title: "Kids Room — Warm Tones",      category: 'Bedroom',    year: '2025', image: p('am-bed-07.jpg')  },
-    { id: 35, title: "Kids Room — Cloud Headboard", category: 'Bedroom',    year: '2025', image: p('am-bed-08.jpg')  },
-    { id: 36, title: "Kids Room — Pink Palette",    category: 'Bedroom',    year: '2025', image: p('am-bed-09.jpg')  },
+    // ── Commercial Complexes ──────────────────────────────────────────────────
+    { id:  5, title: 'Corporate Complex',           category: COM, year: '2023', image: p('project-3.jpg') },
+    { id:  6, title: 'Design Avenue HQ',            category: COM, year: '2024', image: p('ext-05.jpg')    },
+    { id:  7, title: 'Jewellery Store — Main Hall', category: COM, year: '2025', image: p('com-04.jpg')    },
+    { id:  8, title: 'Jewellery Store — Counters',  category: COM, year: '2025', image: p('com-02.jpg')    },
+    { id:  9, title: 'Jewellery Store — Display',   category: COM, year: '2025', image: p('com-03.jpg')    },
+    { id: 10, title: 'Jewellery Store — Play Area', category: COM, year: '2025', image: p('com-01.jpg')    },
 
-    // ── Dining ────────────────────────────────────────────────────────────────
-    { id: 37, title: 'Dining Room — Teal Accent',   category: 'Dining',     year: '2025', image: p('am-din-01.jpg')  },
-    { id: 38, title: 'Dining Room — Green Wall',    category: 'Dining',     year: '2025', image: p('am-din-02.jpg')  },
-    { id: 39, title: 'Dining — Botanical View',     category: 'Dining',     year: '2025', image: p('am-din-03.jpg')  },
-
-    // ── Kitchen ───────────────────────────────────────────────────────────────
-    { id: 40, title: 'Modern Kitchen',              category: 'Kitchen',    year: '2025', image: p('wa-11.jpg')      },
-    { id: 41, title: 'Kitchen with Island',         category: 'Kitchen',    year: '2025', image: p('am-kit-01.jpg')  },
-
-    // ── Commercial ────────────────────────────────────────────────────────────
-    { id: 42, title: 'Jewellery Store — Play Area', category: 'Commercial', year: '2025', image: p('com-01.jpg')     },
-    { id: 43, title: 'Jewellery Store — Counters',  category: 'Commercial', year: '2025', image: p('com-02.jpg')     },
-    { id: 44, title: 'Jewellery Store — Main Hall', category: 'Commercial', year: '2025', image: p('com-03.jpg')     },
-    { id: 45, title: 'Jewellery Store — Display',   category: 'Commercial', year: '2025', image: p('com-04.jpg')     },
-
-    // ── Signature Details ─────────────────────────────────────────────────────
-    { id: 46, title: 'Curved Staircase',            category: 'Detail',     year: '2025', image: p('wa-12.jpg')      },
+    // ── Residential & Office Interiors — Living Rooms ─────────────────────────
+    { id: 11, title: 'Drawing Room',                category: INT, year: '2025', image: p('project-4.jpg') },
+    { id: 12, title: 'Luxury Living Lounge',        category: INT, year: '2025', image: p('wa-02.jpg')     },
+    { id: 13, title: 'Living Room with Staircase',  category: INT, year: '2025', image: p('wa-10.jpg')     },
+    { id: 14, title: 'Living Area & Lift Lobby',    category: INT, year: '2025', image: p('wa-03.jpg')     },
+    { id: 15, title: 'Sitting Room',                category: INT, year: '2025', image: p('wa-04.jpg')     },
+    { id: 16, title: 'Living Room with Fireplace',  category: INT, year: '2025', image: p('wa-09.jpg')     },
+    { id: 17, title: 'Aquarium Feature Wall',       category: INT, year: '2025', image: p('wa-13.jpg')     },
+    { id: 18, title: 'Marble TV Wall Lounge',       category: INT, year: '2025', image: p('am-liv-01.jpg') },
+    { id: 19, title: 'Botanical Mural Living Room', category: INT, year: '2025', image: p('am-liv-02.jpg') },
+    { id: 20, title: 'Classic Living Room',         category: INT, year: '2025', image: p('am-liv-03.jpg') },
+    // Dining
+    { id: 21, title: 'Dining Room — Teal Accent',   category: INT, year: '2025', image: p('am-din-01.jpg') },
+    { id: 22, title: 'Dining Room — Green Wall',    category: INT, year: '2025', image: p('am-din-02.jpg') },
+    { id: 23, title: 'Dining — Botanical View',     category: INT, year: '2025', image: p('am-din-03.jpg') },
+    // Kitchen
+    { id: 24, title: 'Modern Kitchen',              category: INT, year: '2025', image: p('wa-11.jpg')     },
+    { id: 25, title: 'Kitchen with Island',         category: INT, year: '2025', image: p('am-kit-01.jpg') },
+    // Bedrooms
+    { id: 26, title: 'Master Bedroom — Blue Arch',  category: INT, year: '2024', image: p('project-5.jpg') },
+    { id: 27, title: 'Bedroom Suite — Beige',       category: INT, year: '2024', image: p('project-6.jpg') },
+    { id: 28, title: 'Blue Headboard Bedroom',      category: INT, year: '2024', image: p('azhar-1b.jpg')  },
+    { id: 29, title: 'Bedroom — Wardrobe View',     category: INT, year: '2024', image: p('azhar-1c.jpg')  },
+    { id: 30, title: 'Bedroom — Full View',         category: INT, year: '2024', image: p('azhar-1d.jpg')  },
+    { id: 31, title: 'Beige Suite — Side View',     category: INT, year: '2024', image: p('azhar-2b.jpg')  },
+    { id: 32, title: 'Beige Suite — Wide View',     category: INT, year: '2024', image: p('azhar-2c.jpg')  },
+    { id: 33, title: 'Beige Suite — Detail',        category: INT, year: '2024', image: p('azhar-2d.jpg')  },
+    { id: 34, title: 'Classic Bedroom',             category: INT, year: '2025', image: p('wa-01.jpg')     },
+    { id: 35, title: 'Blue Arch Bedroom',           category: INT, year: '2025', image: p('wa-06.jpg')     },
+    { id: 36, title: 'Zen Bamboo Bedroom',          category: INT, year: '2025', image: p('wa-08.jpg')     },
+    { id: 37, title: 'Contemporary Bedroom',        category: INT, year: '2025', image: p('wa-14.jpg')     },
+    { id: 38, title: 'Master Bedroom — Wood',       category: INT, year: '2025', image: p('am-bed-01.jpg') },
+    { id: 39, title: 'Bedroom — Natural Light',     category: INT, year: '2025', image: p('am-bed-02.jpg') },
+    { id: 40, title: 'Bedroom — TV Panel',          category: INT, year: '2025', image: p('am-bed-03.jpg') },
+    { id: 41, title: 'Bedroom — Floral Mural',      category: INT, year: '2025', image: p('am-bed-04.jpg') },
+    { id: 42, title: 'Master Suite — Dressing',     category: INT, year: '2025', image: p('am-bed-05.jpg') },
+    { id: 43, title: "Kids Room — Blush",           category: INT, year: '2025', image: p('am-bed-06.jpg') },
+    { id: 44, title: "Kids Room — Warm Tones",      category: INT, year: '2025', image: p('am-bed-07.jpg') },
+    { id: 45, title: "Kids Room — Cloud Headboard", category: INT, year: '2025', image: p('am-bed-08.jpg') },
+    { id: 46, title: "Kids Room — Pink Palette",    category: INT, year: '2025', image: p('am-bed-09.jpg') },
+    { id: 47, title: 'Curved Staircase',            category: INT, year: '2025', image: p('wa-12.jpg')     },
 ];
 
-const CATEGORIES = ['All', 'Exterior', 'Living Room', 'Bedroom', 'Dining', 'Kitchen', 'Commercial', 'Detail'];
+const CATEGORIES = ['All', 'Residence', 'Apartments', 'Commercial Complexes', 'Institutional', 'Hospitality', 'Residential & Office Interiors'];
 
 const ProjectGallery: React.FC = () => {
     const [active, setActive] = useState('All');
